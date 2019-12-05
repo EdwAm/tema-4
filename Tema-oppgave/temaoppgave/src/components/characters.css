@@ -5,16 +5,30 @@
     gap:1rem;
     max-height:1000px;
     overflow:auto;
-    padding-top: 3rem;
 }
 .character{
-    min-height:25rem;
+    min-height:20rem;
+    max-height: 20rem;
     text-align:center;
     padding:1rem;
-    background-color:#eee;
+    background: linear-gradient(-45deg, #000000, #ff0000, #000000, #ff0000);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
 }
 .character img{
-    width:60%;
+    height:100px;
     border-radius:50%;
     
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
 }

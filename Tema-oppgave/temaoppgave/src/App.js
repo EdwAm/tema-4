@@ -15,11 +15,17 @@ const Got = () => {
 
     return (
         <div className="main">
-            <h2>Characters in Game Of Thrones</h2>
+            <h1>Characters in Game Of Thrones</h1>
             <p></p>
             <div className="characters">
                 {stateCharacters.map( (characters, index) =>
-                 <Character key={index} name={characters.characterName} img={characters.characterImageFull} onClick={removeCharacter}/>
+                 <Character 
+                 key={index} 
+                 name={characters.characterName} 
+                 img={characters.characterImageFull} 
+                 house={characters.houseName}
+                 actor={characters.actorName} 
+                 onClick={removeCharacter}/>
              )}
             </div>
         </div>

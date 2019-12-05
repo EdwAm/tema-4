@@ -7,11 +7,14 @@ const Character = (props) => {
     return(
         <div className="character">
             <h2>{props.name}</h2>
+            <ul>
+                <li>House: {props.house}</li>
+                <li>Actor: {props.actor}</li>
+                
+            </ul>
             <img  src={props.img} alt={"Profile of " + props.name}/>
             <hr/>
-            <p>
-                {props.actorName}<br/>
-            </p>
+            
         </div>
     )
 }

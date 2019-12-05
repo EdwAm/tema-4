@@ -1,5 +1,8 @@
 body { 
-  background-color: #eee;
+  color: #fff;
+	background: linear-gradient(-45deg, #000000, #ff0000, #000000, #ff0000);
+	background-size: 400% 400%;
+	animation: gradientBG 15s ease infinite;
 }
 
 main {
@@ -8,3 +11,20 @@ main {
   gap: 8px;
 }
 
+h1 {
+  font-size: 30px;
+  color: rgb(136, 0, 0);
+  padding-left: 1rem;
+}
+
+@keyframes gradientBG {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
