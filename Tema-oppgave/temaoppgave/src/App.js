@@ -8,24 +8,40 @@ import './components/characters.css'
 const Got = () => {
 
     const [stateCharacters, setStateCharacters] = useState(characters.characters)
+    //const [favourites, setFavourites] = useState([])
     
-    const removeCharacter = (e) => {
-      setStateCharacters(stateCharacters.filter( c => c.name !== e ))
-  }
+    //const filterCharacter = (e) => {
+      //setStateCharacters(characters.filter( c => c.includes(e.target.value)))}
+
+      const removeCharacter = (e) => {
+        setStateCharacters(stateCharacters.filter( c => c.characterName !== e ))}
+
+      // const addFavoritt = (indeks) => {
+      //   setFavourites([...favourites, stateCharacters.characterName[indeks]])  
+      //   console.log(favourites)
+      // }
+
 
     return (
         <div className="main">
             <h1>Characters in Game Of Thrones</h1>
-            <p></p>
+            <p>Trykk på bildet for å fjerne karakterer</p>
+            {/* <div classname="sokeres">
+                <input onInput={filterCharacter}/> 
+            </div> */}
+            
             <div className="characters">
-                {stateCharacters.map( (characters, index) =>
+                
+                {stateCharacters.map( (c, index) =>
                  <Character 
                  key={index} 
-                 name={characters.characterName} 
-                 img={characters.characterImageFull} 
-                 house={characters.houseName}
-                 actor={characters.actorName} 
-                 onClick={removeCharacter}/>
+                 name={c.characterName} 
+                 img={c.characterImageFull} 
+                 house={c.houseName}
+                 actor={c.actorName} 
+                 onClick={removeCharacter}
+                //  onClick={addFavoritt}
+                />
              )}
             </div>
         </div>
